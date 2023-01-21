@@ -1,0 +1,26 @@
+using System;
+
+namespace task1._43
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string enterS = Console.ReadLine();
+            int count = 0;
+            if (enterS[0] == ('w') && (enterS[1] == ('w')  || (enterS[2] == ('w'))))
+            {
+                Console.WriteLine("False");
+            }
+            else if (enterS[0] == ('w'))
+            {
+                Console.WriteLine("True");
+                
+            }
+
+
+
+            Console.ReadLine();   
+        }
+    }
+}
