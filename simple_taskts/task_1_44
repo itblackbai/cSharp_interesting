@@ -1,0 +1,38 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.IO;
+
+namespace task1._43
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a C# program to create a new array of length containing the middle elements of three arrays (each length 3) of integers.
+            Random random = new Random();
+            double sum = 0;
+            int[,] ints = new int [3,3];
+
+            for (int i = 0; i < ints.GetLength(0); i++)
+            {
+                for (int q = 0; q < ints.GetLength(1); q++)
+                {
+                   
+                    ints[i, q] = random.Next(-1, 5);
+                    Console.Write(ints[i, q] + " ");
+                   
+                }
+                Console.WriteLine();
+            };
+            foreach (int item in ints)
+            {
+                 sum = +item;
+            }
+            Console.WriteLine($"Sum is  : {sum}");
+            double average = sum / 9;
+            Console.WriteLine($"Sum is  : {average}");
+            Console.ReadLine();   
+        }
+    }
+}
