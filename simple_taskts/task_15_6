@@ -1,0 +1,34 @@
+using System;
+using System.Globalization;
+using System.Text.RegularExpressions;
+
+namespace task15_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Write a C# Sharp program to display the number
+            //of ticks that have elapsed since the beginning of the twenty-first century
+            //and to instantiate a TimeSpan object using the Ticks property
+
+            DateTime localTime = DateTime.Now;
+            DateTime utcTime = DateTime.UtcNow;
+
+            String[] cultureNames = { "uk-en", "uk-de", "uk-fr" };
+
+            foreach (var cultureName in cultureNames)
+            {
+                var culture = new CultureInfo(cultureName);
+                Console.WriteLine("{0}:", culture.NativeName);
+                Console.WriteLine("   Local date and time: {0}, {1:G}",
+                                  localTime.ToString(culture), localTime.Kind);
+                Console.WriteLine("   UTC date and time: {0}, {1:G}\n",
+                                  utcTime.ToString(culture), utcTime.Kind);
+            }
+
+            Console.ReadLine();
+            
+        }
+    }
+}
